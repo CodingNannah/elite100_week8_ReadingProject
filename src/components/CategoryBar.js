@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 
-export default function BooksBar() {
+export default function CategoryBar() {
     // dummy info:
     const categories = [{id:1, name:"Cooking"},{id:2, name:"Entertainment"},{id:3, name:"Marriage"},{id:4, name:"Marriage Advice"},{id:5, name:"Programming"},{id:6, name:"Science"},{id:7, name:"Self-Help"}]
     const [actCat, setActCat] = useState({})
