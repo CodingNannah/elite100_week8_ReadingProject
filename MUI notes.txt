@@ -1,0 +1,49 @@
+MAKE SURE IT'S ON JS not TS!!!
+
+material.io 
+    dev by Google like Bootstrap for Android
+
+mutation for React = MUI
+    using from https://mui.com/material-ui/getting-started/overview/
+    find options
+    use CodeSandbox to play before adding it to app
+
+Install MUI:
+npm install @mui/material @emotion/react @emotion/styled
+
+Install font:
+Goto Google font = Roboto
+npm install @fontsource/roboto
+
+Install icons:
+npm install @mui/icons-material
+
+use search bar!
+
+Button:
+button & other color customization under "palette-colors"
+Button from MUI is default - default can be named anything!
+
+component API lists all props a component takes
+
+sx is the style tag for MUI
+
+css in curly brackets
+
+icons - Kevin prefers two-tone icons
+
+snackbar like Flask flash messages
+
+Progress bars (spinners)
+
+navigation - Kevin prefers drawer nav (mini drawer variant)
+
+speed dial - pop-up menu
+
+image list
+
+chip (like buttons)
+
+
+MUI THEME CREATOR!
+    under customization & theming

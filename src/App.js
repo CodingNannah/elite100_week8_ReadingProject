@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import Error from './components/Error';
+import Button from './components/Button';
+import BooksBar from './components/BooksBar';
+import AdminMenu from './components/AdminMenu';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BooksBar></BooksBar>  
+      <Error>Oops! What was that?</Error>
+      {/* <Error style={{backgroundColor: "cyan"}} className="this-one">This ONE Error with a background color.</Error> */}
+      <Button onClick={()=>console.log("clicked")}>Add Me!</Button>
+      <Button onClick={()=>console.log("clicked")}>Remove Me</Button>
+      <AdminMenu/>
+      
     </div>
   );
 }
