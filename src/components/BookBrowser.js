@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import LibraryAddTwoToneIcon from '@mui/icons-material/LibraryAddTwoTone';
 
-// export default function BookBrowser({cat.id}) {
 
 export default function BookBrowser() {
 
@@ -57,75 +56,83 @@ export default function BookBrowser() {
 
 const book = [
   {
-    "id": 70605,
-    "cat": "Self-Help",
-    "title": "The One Thing",
-    "author": "Gary Keller",
-    "pages": 212,
-    "summary": "Surprisingly simple means to achieve extraordinary results.",
-    "img": "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg"
+    book_id: 70605,
+    title: "The One Thing",
+    author: "Gary Keller",
+    pages: 212,
+    summary: "Surprisingly simple means to achieve extraordinary results.",
+    img: "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg",
+    category: "Self-Help",
+    category_id: 7
   },
   {
-    "id": 70606,
-    "cat": "Self-Help",
-    "title": "The One Thing",
-    "author": "Gary Keller",
-    "pages": 212,
-    "summary": "Surprisingly simple means to achieve extraordinary results.",
-    "img": "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg"
+    book_id: 70606,
+    title: "The One Thing",
+    author: "Gary Keller",
+    pages: 212,
+    summary: "Surprisingly simple means to achieve extraordinary results.",
+    img: "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg",
+    category: "Self-Help",
+    category_id: 7
   },
   {
-    "id": 70607,
-    "cat": "Self-Help",
-    "title": "The One Thing",
-    "author": "Gary Keller",
-    "pages": 212,
-    "summary": "Surprisingly simple means to achieve extraordinary results.",
-    "img": "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg"
+    book_id: 70607,
+    title: "The One Thing",
+    author: "Gary Keller",
+    pages: 212,
+    summary: "Surprisingly simple means to achieve extraordinary results.",
+    img: "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg",
+    category: "Self-Help",
+    category_id: 7
   },
   {
-    "id": 70608,
-    "cat": "Self-Help",
-    "title": "The One Thing",
-    "author": "Gary Keller",
-    "pages": 212,
-    "summary": "Surprisingly simple means to achieve extraordinary results.",
-    "img": "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg"
+    book_id: 70608,
+    title: "The One Thing",
+    author: "Gary Keller",
+    pages: 212,
+    summary: "Surprisingly simple means to achieve extraordinary results.",
+    img: "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg",
+    category: "Self-Help",
+    category_id: 7
   },
   {
-    "id": 70609,
-    "cat": "Self-Help",
-    "title": "The One Thing",
-    "author": "Gary Keller",
-    "pages": 212,
-    "summary": "Surprisingly simple means to achieve extraordinary results.",
-    "img": "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg"
+    book_id: 70609,
+    title: "The One Thing",
+    author: "Gary Keller",
+    pages: 212,
+    summary: "Surprisingly simple means to achieve extraordinary results.",
+    img: "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg",
+    category: "Self-Help",
+    category_id: 7
   },
   {
-    "id": 70610,
-    "cat": "Self-Help",
-    "title": "The One Thing",
-    "author": "Gary Keller",
-    "pages": 212,
-    "summary": "Surprisingly simple means to achieve extraordinary results.",
-    "img": "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg"
+    book_id: 70610,
+    title: "The One Thing",
+    author: "Gary Keller",
+    pages: 212,
+    summary: "Surprisingly simple means to achieve extraordinary results.",
+    img: "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg",
+    category: "Self-Help",
+    category_id: 7
   },
   {
-    "id": 70611,
-    "cat": "Self-Help",
-    "title": "The One Thing",
-    "author": "Gary Keller",
-    "pages": 212,
-    "summary": "Surprisingly simple means to achieve extraordinary results.",
-    "img": "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg"
+    book_id: 70611,
+    title: "The One Thing",
+    author: "Gary Keller",
+    pages: 212,
+    summary: "Surprisingly simple means to achieve extraordinary results.",
+    img: "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg",
+    category: "Self-Help",
+    category_id: 7
   },
   {
-    "id": 70612,
-    "cat": "Self-Help",
-    "title": "The One Thing",
-    "author": "Gary Keller",
-    "pages": 212,
-    "summary": "Surprisingly simple means to achieve extraordinary results.",
-    "img": "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg"
+    book_id: 70612,
+    title: "The One Thing",
+    author: "Gary Keller",
+    pages: 212,
+    summary: "Surprisingly simple means to achieve extraordinary results.",
+    img: "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg",
+    category: "Self-Help",
+    category_id: 7
   },
 ];

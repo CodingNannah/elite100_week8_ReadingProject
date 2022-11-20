@@ -18,13 +18,14 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Book() {
     // dummy book
     const book = {
-        "id": 70605,
-        "cat": "Self-Help",
-        "title": "The One Thing",
-        "author": "Gary Keller",
-        "pages": 212,
-        "summary": "Surprisingly simple means to achieve extraordinary results.",
-        "img": "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg"
+        book_id: 70605,
+        title: "The One Thing",
+        author: "Gary Keller",
+        pages: 212,
+        summary: "Surprisingly simple means to achieve extraordinary results.",
+        img: "https://res.cloudinary.com/drgbhwpia/image/upload/v1668882753/Reading%20Lists/one_nwoxnz.jpg",
+        category: "Self-Help",
+        category_id: 7 
     }
     return (
         <Grid container spacing={1} sx={{m:1, pr:1, pb:1, border:'1px solid', borderRadius:1 }}>

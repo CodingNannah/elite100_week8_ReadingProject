@@ -19,7 +19,6 @@ import ListItemText from '@mui/material/ListItemText';
 import LibraryBooksTwoToneIcon from '@mui/icons-material/LibraryBooksTwoTone';
 import CalendarViewWeekTwoToneIcon from '@mui/icons-material/CalendarViewWeekTwoTone';
 import ModeSwitch from './ModeSwitch';
-// import AdminMenu from './AdminMenu';
 
 const drawerWidth = 240;
 
@@ -135,10 +134,6 @@ export default function NavBar({ children }) {
         </Box>
         <Divider />
         <Box sx={{ color: "white", backgroundColor: "#165a92" }}>
-        {/* <Divider />
-            <ListItem sx={{ display: 'absolute', bottom: "0px", right: "150px", alignContent: "center", justifyContent: "center" }}>
-              <AdminMenu />
-            </ListItem> */}
           <List>
             {[
               { label: 'My List', path: '/list', icon: <LibraryBooksTwoToneIcon sx={{ color: 'white' }} /> },
