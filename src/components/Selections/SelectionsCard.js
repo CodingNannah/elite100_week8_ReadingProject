@@ -6,15 +6,9 @@
 // ReadingList needs to be more permanent version of My Reading List
 
 import React from 'react'
-import Selections from '../components/Selections/Index'
-import Typography from '@mui/material/Typography'
 
-export default function SelectionsPage() {
+export default function SelectionsCard() {
   return (
-    <>
-        <Typography variant='h3'>My Reading List Selections</Typography>
-        <Selections/> 
-    </>
+    <div>SelectionsCard</div>
   )
 }
-

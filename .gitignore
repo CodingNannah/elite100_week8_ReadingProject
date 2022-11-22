@@ -26,4 +26,9 @@ yarn-error.log*
 /notes
 /public/images
 /unusedViews
-/unusedComponents
+/unused
+
+# just to be safe
+/unused/components
+/unused/views
+
