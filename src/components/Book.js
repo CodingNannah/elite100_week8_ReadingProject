@@ -31,8 +31,7 @@ export default function Book() {
         <Grid container spacing={1} sx={{m:1, pr:1, pb:1, border:'1px solid', borderRadius:1 }}>
             <Grid item xs={12} s={12} md={12}>
                 <Item sx={{ display:'flex', justifyContent:'center'}}>
-                    <Avatar alt={book.title} sx={{ height: "30%", width: "30%" }} variant="rounded" src={book.img}></Avatar>
-                </Item>
+                    <Avatar alt={book.title} sx={{ height: "30%", width: "30%" }} variant="rounded" src={book.img}/>                </Item>
             </Grid>
             <Grid item xs={12} s={12} md={12}>
                 <Item sx={{height:'100%', alignContent:'center' }}>

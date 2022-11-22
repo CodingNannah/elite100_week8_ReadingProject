@@ -20,7 +20,7 @@ export default function CategoryBar(actCat, setActCat) {
         if (actCat.id === cat.id){
             setActCat({})
         } else {
-            setActCat(cat)
+            setActCat({cat})
         }
     };
 

@@ -33,7 +33,7 @@ export default function CatForm({ category }) {
         initialValues,
         validationSchema: FormSchema,
         onSubmit: (values, {resetForm}) => handleSubmit(values, resetForm),
-        enableReinitialization: true,
+        enableReinitialize: true,
     })
 
     return (

@@ -1,3 +1,5 @@
+// Kevin's ItemForm
+
 import React from 'react';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
@@ -7,19 +9,21 @@ import { FormHelperText, FormControl, InputLabel, Select, MenuItem } from '@mui/
 
 const FormSchema = Yup.object(
     { 
-        book_id: Yup.number().integer().required('Required'),
+        // book: title vs name
         title: Yup.string().required('Required'),
         author: Yup.string().required('Required'),
-        // pages: Yup.number().integer().required('Required'),
-        // summary: Yup.string().required('Required'),
+        pages: Yup.number().integer(),
+        summary: Yup.string(),
         img: Yup.string().url().required('Required'),
-        category_id: Yup.number().integer().required('Required'),
+        // category or category_id = subject in API
+        subject: Yup.number().integer().required('Required'),
     }    
 )
 
 
-export default function AdminBkForm({ book }) {
+export default function BookForm({ book }) {
 
+    // dummy data for drop-down menu creation
     const categories = [
         {id:1, name:"Cooking"},
         {id:2, name:"Entertainment"},
@@ -31,13 +35,13 @@ export default function AdminBkForm({ book }) {
     ]
 
     const initialValues = {
-        book_id: book?.book_id ?? 0,
+        // book_id: book?.book_id ?? 0,
         title: book?.title ?? '',
         author: book?.author ?? '',
         pages: book?.pages ?? 0,
         summary: book?.summary ?? '',
         img: book?.img ?? '',
-        category_id: book?.category_id ?? ''
+        subject: book?.subject ?? ''
     }
 
     const handleSubmit = (values, resetForm) => {
@@ -50,7 +54,7 @@ export default function AdminBkForm({ book }) {
     }
 
     const handleDelete = () => {
-        console.log("deleting book: ", book.title)
+        console.log("deleting book: ", book.book_id)
     }
 
 
@@ -58,7 +62,7 @@ export default function AdminBkForm({ book }) {
         initialValues,
         validationSchema: FormSchema,
         onSubmit: (values, {resetForm}) => handleSubmit(values, resetForm),
-        enableReinitialization: true,
+        enableReinitialize: true,
     })
 
     return (
@@ -66,24 +70,10 @@ export default function AdminBkForm({ book }) {
             <TextField
                 fullWidth
                 sx={{ mt: 2, mb: 2 }}
-                id="book_id"
-                name="book_id"
-                label="Book ID"
-                placeholder="Book ID"
-                type="book_id"
-                value={formik.values.book_id}
-                onChange={formik.handleChange}
-                error={formik.touched.book_id && Boolean(formik.errors.book_id)}
-                helperText={formik.touched.book_id && formik.errors.book_id}
-            />       
-            <TextField
-                fullWidth
-                sx={{ mt: 2, mb: 2 }}
                 id="title"
                 name="title"
                 label="Book Title"
                 placeholder="Book Title"
-                type="title"
                 value={formik.values.title}
                 onChange={formik.handleChange}
                 error={formik.touched.title && Boolean(formik.errors.title)}
@@ -96,7 +86,6 @@ export default function AdminBkForm({ book }) {
                 name="author"
                 label="Author"
                 placeholder="Author"
-                type="author"
                 value={formik.values.author}
                 onChange={formik.handleChange}
                 error={formik.touched.author && Boolean(formik.errors.author)}
@@ -109,7 +98,6 @@ export default function AdminBkForm({ book }) {
                 name="pages"
                 label="Pages"
                 placeholder="Pages"
-                type="pages"
                 value={formik.values.pages}
                 onChange={formik.handleChange}
                 error={formik.touched.pages && Boolean(formik.errors.pages)}
@@ -122,7 +110,6 @@ export default function AdminBkForm({ book }) {
                 name="summary"
                 label="Summary"
                 placeholder="Summary"
-                type="summary"
                 value={formik.values.summary}
                 onChange={formik.handleChange}
                 error={formik.touched.summary && Boolean(formik.errors.summary)}
@@ -135,7 +122,6 @@ export default function AdminBkForm({ book }) {
                 name="img"
                 label="Book Image URL"
                 placeholder="Book Image URL"
-                type="img"
                 value={formik.values.img}
                 onChange={formik.handleChange}
                 error={formik.touched.img && Boolean(formik.errors.img)}
@@ -144,10 +130,10 @@ export default function AdminBkForm({ book }) {
             <FormControl fullwidth>
                 <InputLabel id="category-label-id">Category</InputLabel>
                 <Select
-                    id = "category_id"
-                    name = "category_id"
-                    value = {formik.values.category_id}
-                    type = "category-label-id"
+                    labelId= "category-label-id"
+                    id = "category-id"
+                    name = "subject"
+                    value = {formik.values.subject}
                     placeholder = "Category"
                     label = "Category"
                     onChange = {formik.handleChange}
@@ -166,10 +152,10 @@ export default function AdminBkForm({ book }) {
             </FormControl>
 
             
-            <Button type="submit" fullWidth sx={{ my: 1 }} variant="contained">{book.book_id ? "Create Book" : "Edit Book" }</Button>
-            
+            <Button type="submit" fullWidth sx={{ my: 1 }} variant="contained">{book ? "Edit Book" : "Create Book" }</Button>
+            {book ?
             <Button fullWidth color="error" variant="contained" onClick={()=>handleDelete}>Delete</Button>
-            
+            : ''}
 
         </form>
     )

@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import LibraryAddTwoToneIcon from '@mui/icons-material/LibraryAddTwoTone';
 
-
+// Pass in category_id or book_id? -- see SelectBooks.js in views
 export default function BookBrowser() {
 
   const handleAddToList = (book) => {
@@ -56,7 +56,7 @@ export default function BookBrowser() {
 
 const book = [
   {
-    book_id: 70605,
+    id: 70605,
     title: "The One Thing",
     author: "Gary Keller",
     pages: 212,
@@ -66,7 +66,7 @@ const book = [
     category_id: 7
   },
   {
-    book_id: 70606,
+    id: 70606,
     title: "The One Thing",
     author: "Gary Keller",
     pages: 212,
@@ -76,7 +76,7 @@ const book = [
     category_id: 7
   },
   {
-    book_id: 70607,
+    id: 70607,
     title: "The One Thing",
     author: "Gary Keller",
     pages: 212,
@@ -86,7 +86,7 @@ const book = [
     category_id: 7
   },
   {
-    book_id: 70608,
+    id: 70608,
     title: "The One Thing",
     author: "Gary Keller",
     pages: 212,
@@ -96,7 +96,7 @@ const book = [
     category_id: 7
   },
   {
-    book_id: 70609,
+    id: 70609,
     title: "The One Thing",
     author: "Gary Keller",
     pages: 212,
@@ -106,7 +106,7 @@ const book = [
     category_id: 7
   },
   {
-    book_id: 70610,
+    id: 70610,
     title: "The One Thing",
     author: "Gary Keller",
     pages: 212,
@@ -116,7 +116,7 @@ const book = [
     category_id: 7
   },
   {
-    book_id: 70611,
+    id: 70611,
     title: "The One Thing",
     author: "Gary Keller",
     pages: 212,
@@ -126,7 +126,7 @@ const book = [
     category_id: 7
   },
   {
-    book_id: 70612,
+    id: 70612,
     title: "The One Thing",
     author: "Gary Keller",
     pages: 212,

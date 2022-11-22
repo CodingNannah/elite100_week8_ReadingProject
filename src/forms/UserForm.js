@@ -7,8 +7,8 @@ import Button from '@mui/material/Button';
 
 const FormSchema = Yup.object(
     {
-        firstName: Yup.string().required('Required'),
-        lastName: Yup.string().required('Required'),
+        first_name: Yup.string().required('Required'),
+        last_name: Yup.string().required('Required'),
         email: Yup.string('Enter your email').email('Enter a valid email').required('Required'),
         password: Yup.string('Create a password').required('Required'),
     }
@@ -43,7 +43,7 @@ export default function UserForm({ user }) {
         initialValues,
         validationSchema: FormSchema,
         onSubmit: (values, {resetForm}) => handleSubmit(values, resetForm),
-        enableReinitialization: true,
+        enableReinitialize: true,
     })
 
     return (
@@ -52,10 +52,10 @@ export default function UserForm({ user }) {
                 fullWidth
                 sx={{ mt: 2, mb: 2 }}
                 id="firstName"
-                name="firstName"
+                name="first_name"
                 label="First Name"
                 placeholder="First Name"
-                type="firstName"
+                type="first_name"
                 value={formik.values.firstName}
                 onChange={formik.handleChange}
                 error={formik.touched.firstName && Boolean(formik.errors.firstName)}
@@ -65,10 +65,10 @@ export default function UserForm({ user }) {
                 fullWidth
                 sx={{ mt: 2, mb: 2 }}
                 id="lastName"
-                name="lastName"
+                name="last_name"
                 label="Last Name"
                 placeholder="Last Name"
-                type="lastName"
+                type="last_name"
                 value={formik.values.lastName}
                 onChange={formik.handleChange}
                 error={formik.touched.lastName && Boolean(formik.errors.lastName)}

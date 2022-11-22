@@ -30,7 +30,6 @@ export default function LoginForm() {
         initialValues,
         validationSchema: FormSchema,
         onSubmit: (values, {resetForm}) => handleSubmit(values, resetForm),
-        enableReinitialization: true,
     })
 
     return (
